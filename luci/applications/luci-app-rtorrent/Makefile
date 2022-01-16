@@ -9,7 +9,7 @@ include $(TOPDIR)/rules.mk
 LUCI_TITLE:=rTorrent LuCI web interface
 LUCI_DEPENDS:=+rtorrent-rpc +luaexpat +luasocket +luasec +screen
 
-PKG_VERSION:=0.1.7
+PKG_VERSION:=0.2.3
 PKG_RELEASE:=1
 PKG_LICENSE:=GPLv3
 
