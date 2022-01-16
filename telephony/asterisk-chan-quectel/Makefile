@@ -41,7 +41,7 @@ define Package/asterisk-chan-quectel/Default
   SECTION:=net
   CATEGORY:=Network
   URL:=https://github.com/IchthysMaranatha/asterisk-chan-quectel
-  DEPENDS:=asteriks $(ICONV_DEPENDS) +kmod-usb-acm +kmod-usb-serial +kmod-usb-serial-option +libusb-1.0 +alsa-lib
+  DEPENDS:=asterisk $(ICONV_DEPENDS) +kmod-usb-acm +kmod-usb-serial +kmod-usb-serial-option +libusb-1.0 +alsa-lib
   TITLE:=Asterisk Mobile Telephony Module
 endef
 
