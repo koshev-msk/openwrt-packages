@@ -39,9 +39,9 @@ include $(INCLUDE_DIR)/nls.mk
 define Package/asterisk-chan-quectel/Default
   SUBMENU:=Telephony
   SECTION:=net
-  CATEGORY:=Utilities
+  CATEGORY:=Network
   URL:=https://github.com/IchthysMaranatha/asterisk-chan-quectel
-  DEPENDS:=$(ICONV_DEPENDS) +kmod-usb-acm +kmod-usb-serial +kmod-usb-serial-option +libusb-1.0 +usb-modeswitch +alsa-lib
+  DEPENDS:=asteriks $(ICONV_DEPENDS) +kmod-usb-acm +kmod-usb-serial +kmod-usb-serial-option +libusb-1.0 +alsa-lib
   TITLE:=Asterisk Mobile Telephony Module
 endef
 

@@ -9,6 +9,8 @@ include $(INCLUDE_DIR)/package.mk
 
 define Package/$(PKG_NAME)
   PKGARCH:=all
+  SECTION:=net
+  CATEGORY:=Network
   DEPENDS:=+comgt +kmod-usb-acm +kmod-usb-net-cdc-ncm
   TITLE:=Fibocom L850/L860 scripts
 endef
