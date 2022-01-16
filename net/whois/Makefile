@@ -7,7 +7,7 @@ PKG_SOURCE_URL:=http://ftp.debian.org/debian/pool/main/w/whois
 PKG_MD5SUM:=4db48a482a06261ffa358d9f52c9bd7e
 PKG_CAT:=xcat
 
-PKG_BUILD_DIR:=$(BUILD_DIR)/whois-$(PKG_VERSION)
+PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 
 include $(INCLUDE_DIR)/package.mk
 
