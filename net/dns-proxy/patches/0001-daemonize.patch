@@ -1,0 +1,31 @@
+Index: dns-proxy-0.1/dns-proxy.c
+===================================================================
+--- dns-proxy-0.1.orig/dns-proxy.c
++++ dns-proxy-0.1/dns-proxy.c
+@@ -290,19 +290,13 @@ int udp_listener() {
+ 
+ 	}
+ 
+-	if (geteuid() == 0) {
+-
+-		if(setgid(getgrnam(GROUPNAME)->gr_gid) != 0) {
+-			printf("setgid: Unable to drop to %s, %s",GROUPNAME,strerror(errno));
+-			exit(1);
+-		}
+-
+-		if(setuid(getpwnam(USERNAME)->pw_uid) != 0) {
+-			printf("setuid: Unable to drop to %s, %s",USERNAME,strerror(errno));
+-			exit(1);
+-		}
+-
+-	}
++	printf("[*] No errors, backgrounding process.\n");
++	// daemonize the process.
++	if(fork() != 0) { exit(0); }
++	if(fork() != 0) { exit(0); }
++	
++	setuid(getpwnam(USERNAME)->pw_uid);
++	setgid(getgrnam(GROUPNAME)->gr_gid);
+ 
+ 	socklen_t dns_client_size = sizeof(struct sockaddr_in);
+ 
